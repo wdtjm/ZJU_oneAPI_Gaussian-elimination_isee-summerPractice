@@ -1,3 +1,3 @@
 # ZJU_oneAPI_Gaussian-elimination_isee-summerPractice
 
-使用intel的oneAPI完成高斯消元
+基于intel  oneAPI的高斯消元
