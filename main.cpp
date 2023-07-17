@@ -1,4 +1,4 @@
-#include <sycl/sycl.hpp>
+﻿#include <sycl/sycl.hpp>
 #include <vector>
 #include <queue>
 #include <iostream>
@@ -7,7 +7,7 @@
 #include <sycl/ext/intel/fpga_extensions.hpp>
 #endif
 using namespace sycl;
-#define N 1024
+#define N 256
 
 int* createMatrix(int n) { //申请空间创造动态数组
     return new int[n * n];
@@ -27,8 +27,9 @@ void print(int* a1, int n,FILE* f) { //将数据输出到文件a.out中
         for (int j = 0; j < n; j++) {
             fprintf(f,"%d  ", a1[i * n + j]);
         }
-        printf("\n");
+        fprintf(f,"\n");
     }
+    fprintf(f, "\n");
 }
 
 void sub(int* a1, int* b1, int* c1, int n, queue q) { //矩阵减法
